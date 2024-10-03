@@ -39,7 +39,7 @@
     "react-router": "5.2.0",
     "react-router-dom": "5.2.0",
     "react-select": "^5.8.0",
-    "recharts": "^2.12.2",
+    "recharts": "^2.12.7",
     "smooth-scrollbar": "^8.8.4",
     "smooth-scrollbar-react": "^2.4.1",
     "styled-components": "^6.1.0",
