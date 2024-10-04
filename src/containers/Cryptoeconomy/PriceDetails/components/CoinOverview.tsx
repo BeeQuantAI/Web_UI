@@ -2,20 +2,27 @@ import styled from 'styled-components';
 import Panel from '@/shared/components/Panel';
 import { colorAdditional } from '@/styles/palette';
 import { marginRight } from '@/styles/directions';
+import { Row } from 'react-bootstrap';
+import TrendingUpIcon from 'mdi-react/TrendingUpIcon';
 
 const CoinOverview = () => {
 
   return (
     <Panel md={12} lg={12} xl={12} sm={12} xs={12} title="Coin overview">        
-      <DashboardSalesReportWrap>
-          <div style={{ width: '155px'}}>
-            <DashboardStatLargeTitle>BTC</DashboardStatLargeTitle>
-            <DashboardStatSubTitle>/USDT</DashboardStatSubTitle>
-          </div>
+    
+      <Row style={{ marginTop: '-22px', marginBottom: '3px' }}>
+
           <div>
+            <div style={{ display: 'flex', alignItems: 'center' }}>
           <DashboardStatMainNumber>$12,321</DashboardStatMainNumber>
-          <DashboardStatMnTitle >Current Price</DashboardStatMnTitle>
+          <span style={{ color: '#4ce1b6' }}><TrendingUpIcon /></span>
           </div>
+          <DashboardStatMnTitle style={{ fontWeight: '500' }}>BTC/USDT</DashboardStatMnTitle>
+          </div>
+ 
+        </Row>
+        <Row>
+        <DashboardSalesReportWrap>
           <div>
             <DashboardStatDataNumber style={{ color: '#4ce1b6' }}>+$21.3</DashboardStatDataNumber>
             <DashboardStatMnTitle>1h Change (value)</DashboardStatMnTitle>
@@ -40,7 +47,9 @@ const CoinOverview = () => {
             <DashboardStatDataNumber>$75252152.53</DashboardStatDataNumber>
             <DashboardStatMnTitle>24h Volume</DashboardStatMnTitle>
           </div>
-      </DashboardSalesReportWrap>
+          </DashboardSalesReportWrap>
+          </Row>
+    
     </Panel>
   );
 };
@@ -101,7 +110,7 @@ const DashboardSalesReportWrap = styled.div`
   display: flex;
   align-items: center;
 
-  margin-top: -30px;
+
    flex-wrap: wrap;
 
   & > div {
